@@ -85,7 +85,7 @@ with tab1:
             st.warning(f"Se detectaron {len(outliers)} puntos sospechosos.")
             if st.button("Normalizar Datos (Limpieza GIGO)"):
                 # Reemplazar con el promedio móvil de los vecinos
-                df_clean.loc[df_clean['Outlier'], 'Demanda'] = mean
+                df_clean.loc[df_clean['Outlier'], 'Demanda'] = float(mean)
                 st.session_state.df = df_clean
                 st.rerun()
         st.info("Nota: Un valor muy bajo puede ser desabasto (limpiar). Un valor muy alto puede ser una promoción única.")

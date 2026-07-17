@@ -46,7 +46,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["🧹 1. Limpieza GIGO", "🏆 2. Modo Torneo"
 
 # --- GENERACIÓN DE DATOS DE EJEMPLO ---
 if 'df' not in st.session_state:
-    fechas = pd.date_range(start='2023-01-01', periods=15, freq='M')
+    fechas = pd.date_range(start='2023-01-01', periods=15, freq='ME')
     data = {
         'Fecha': fechas,
         'Demanda': [100, 110, 5, 115, 120, 130, 140, 155, 160, 250, 170, 180, 190, 200, 210],
